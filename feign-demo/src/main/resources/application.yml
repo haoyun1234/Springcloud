@@ -1,0 +1,24 @@
+server:
+  port: ${port:8763}
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: feign-demo
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/maven?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123
+    #rabbitmq创建消息队列
+  #rabbitmq:
+    #host: localhost
+    #port: 5672
+    #username: guest
+    #password: guest
